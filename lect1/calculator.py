@@ -7,12 +7,15 @@ def sum(m, n):
 
 def divide(m, n):
     counter = 0
+    if n == 0:
+        raise ZeroDivisionError()
+    is_negative = m*n < 0
     n, m = abs(n), abs(m)
     while m >= n:
         m -= n
         counter += 1
 
-    return -counter if m*n < 0 else counter 
+    return -counter if is_negative else counter 
 
 class FooCalculator:
 
