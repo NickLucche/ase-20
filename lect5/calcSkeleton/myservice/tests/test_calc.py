@@ -1,3 +1,6 @@
+# ./spec/spec_helper.rb
+# ./test/test_helper.rb
+# ..etc..
 import unittest
 import json
 from flask import request, jsonify
