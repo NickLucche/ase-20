@@ -3,11 +3,13 @@ python: 3.6
 before_install:
   - cd lect5/calcSkeleton
 env:
- - TOX_ENV=py27
- - TOX_ENV=py36
- - TOX_ENV=docs
- - TOX_ENV=flake8
+  - TOX_ENV=py27
+  - TOX_ENV=py36
+  - TOX_ENV=docs
+  - TOX_ENV=flake8
 install:
- - pip install tox
+#  - pip install tox
+  - pip install -r requirements.txt
 script:
- - tox -e $TOX_ENV
+#  - tox -e $TOX_ENV
+  - python -m pytest --cov-report term-missing --cov=myservice myservice/tests/ 
