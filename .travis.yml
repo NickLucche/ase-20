@@ -1,8 +1,10 @@
 language: python
-python: 3.5
+python: 3.6
+before_install:
+  - cd lect5/calcSkeleton
 env:
  - TOX_ENV=py27
- - TOX_ENV=py35
+ - TOX_ENV=py36
  - TOX_ENV=docs
  - TOX_ENV=flake8
 install:
